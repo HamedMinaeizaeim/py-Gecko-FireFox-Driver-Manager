@@ -15,7 +15,7 @@ if os.path.isfile(requirementPath):
         install_requires = f.read().splitlines()
 
 setup(
-    name='py-GeckoDriverManager',
+    name='py_gecko_driver_manager',
     version='0.0.1',
     license='',
     author='Hamed',
