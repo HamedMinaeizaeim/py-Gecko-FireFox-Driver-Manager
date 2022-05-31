@@ -16,7 +16,7 @@ if os.path.isfile(requirementPath):
 
 setup(
     name='py_gecko_driver_manager',
-    version='0.0.1',
+    version='0.0.2',
     license='',
     author='Hamed',
     author_email='hamed.minaei@gmail.com',
