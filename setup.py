@@ -15,7 +15,7 @@ if os.path.isfile(requirementPath):
         install_requires = f.read().splitlines()
 
 setup(
-    name='py_gecko_driver_manager',
+    name='py_firefox_driver_manager',
     version='0.0.2',
     license='',
     author='Hamed',
