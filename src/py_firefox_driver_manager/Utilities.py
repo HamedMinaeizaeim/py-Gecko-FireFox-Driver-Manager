@@ -52,7 +52,7 @@ class GeckoFireFoxdriverManager:
             raise RuntimeError('Could not determine geckodriver download URL for this platform.')
         self.platform = platform
         self.architecture = architecture
-        return platform, architecture
+        return architecture
 
     def get_downlaod_url(self):
         full_url = 'https://github.com/mozilla/geckodriver/releases/download/'+\

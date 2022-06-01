@@ -16,7 +16,7 @@ if os.path.isfile(requirementPath):
 
 setup(
     name='py_firefox_driver_manager',
-    version='0.0.3',
+    version='0.0.4',
     license='',
     author='Hamed',
     author_email='hamed.minaei@gmail.com',
