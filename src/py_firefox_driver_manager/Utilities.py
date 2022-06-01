@@ -147,9 +147,6 @@ class GeckoFireFoxdriverManager:
 
 
 
-if __name__=='__main__':
-    driver = GeckoFireFoxdriverManager()
-    platform, architecture = driver.get_platform_architecture()
-    print(driver.install_geckodriver())
+
 
 

@@ -16,7 +16,7 @@ if os.path.isfile(requirementPath):
 
 setup(
     name='py_firefox_driver_manager',
-    version='0.0.2',
+    version='0.0.3',
     license='',
     author='Hamed',
     author_email='hamed.minaei@gmail.com',
@@ -33,7 +33,7 @@ setup(
         "Operating System :: OS Independent",
     ],
     install_requires=install_requires,
-    package_dir={"": "src"},
-    packages=setuptools.find_packages(where="src"),
+    packages=['py_firefox_driver_manager'],
+    package_dir={'': 'src'},
     python_requires=">=3.6",
 )
