@@ -52,7 +52,7 @@ class GeckoFireFoxdriverManager:
             raise RuntimeError('Could not determine geckodriver download URL for this platform.')
         self.platform = platform
         self.architecture = architecture
-        return platform, architecture
+        return architecture
 
     def get_downlaod_url(self):
         full_url = 'https://github.com/mozilla/geckodriver/releases/download/'+\
@@ -134,10 +134,14 @@ class GeckoFireFoxdriverManager:
         if not os.path.isfile(zipfilename):
             self.download_geckodriver()
 
-        self.uncompress(zipfilename, self.directory)
         file_names = glob.glob(self.directory + '/*geckodriver*', recursive=True)
         file_names.remove(zipfilename)
         if len(file_names)>0:
+            return file_names[0]
+        else:
+            self.uncompress(zipfilename, self.directory)
+            file_names = glob.glob(self.directory + '/*geckodriver*', recursive=True)
+            file_names.remove(zipfilename)
             return file_names[0]
 
 
@@ -147,9 +151,6 @@ class GeckoFireFoxdriverManager:
 
 
 
-if __name__=='__main__':
-    driver = GeckoFireFoxdriverManager()
-    platform, architecture = driver.get_platform_architecture()
-    print(driver.install_geckodriver())
+
 
 
