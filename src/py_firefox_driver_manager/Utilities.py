@@ -134,10 +134,14 @@ class GeckoFireFoxdriverManager:
         if not os.path.isfile(zipfilename):
             self.download_geckodriver()
 
-        self.uncompress(zipfilename, self.directory)
         file_names = glob.glob(self.directory + '/*geckodriver*', recursive=True)
         file_names.remove(zipfilename)
         if len(file_names)>0:
+            return file_names[0]
+        else:
+            self.uncompress(zipfilename, self.directory)
+            file_names = glob.glob(self.directory + '/*geckodriver*', recursive=True)
+            file_names.remove(zipfilename)
             return file_names[0]
 
 

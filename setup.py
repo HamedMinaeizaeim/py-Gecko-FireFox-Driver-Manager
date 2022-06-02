@@ -14,9 +14,10 @@ if os.path.isfile(requirementPath):
     with open(requirementPath) as f:
         install_requires = f.read().splitlines()
 
+print(install_requires)
 setup(
     name='py_firefox_driver_manager',
-    version='0.0.4',
+    version='0.0.5',
     license='',
     author='Hamed',
     author_email='hamed.minaei@gmail.com',
